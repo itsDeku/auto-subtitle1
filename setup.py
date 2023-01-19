@@ -10,7 +10,6 @@ setup(
     py_modules=["auto_subtitle"],
     author="Miguel Piedrafita",
     install_requires=[
-        'youtube-dl',
         'whisper @ git+https://github.com/openai/whisper.git@main#egg=whisper'
     ],
     description="Automatically generate and embed subtitles into your videos",
