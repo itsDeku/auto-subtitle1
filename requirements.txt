@@ -1,2 +1,2 @@
-youtube-dl
+youtube_dl==2021.6.6
 git+https://github.com/openai/whisper.git
