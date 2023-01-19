@@ -1,2 +1,2 @@
-git+https://github.com/openai/whisper.git
 youtube-dl
+git+https://github.com/openai/whisper.git
