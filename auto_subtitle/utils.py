@@ -4,8 +4,8 @@ import whisper
 import argparse
 import warnings
 import tempfile
-from utils import filename, str2bool, write_srt
-from Tk_gui import Tk_Window
+from .utils import filename, str2bool, write_srt
+from .Tk_gui import Tk_Window
 
 
 def main():
