@@ -4,13 +4,15 @@ import whisper
 import argparse
 import warnings
 import tempfile
-from .utils import filename, str2bool, write_srt
+from utils import filename, str2bool, write_srt
+from Tk_gui import Tk_Window
 
 
 def main():
     parser = argparse.ArgumentParser(
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument("video", nargs="+", type=str,
+    parser.add_argument("--gui","-ui",type=str2bool ,default=False ,help="open up a GUI interface")
+    parser.add_argument("--video",'-vo', nargs="+", type=str,
                         help="paths to video files to transcribe")
     parser.add_argument("--model", default="small",
                         choices=whisper.available_models(), help="name of the Whisper model to use")
@@ -27,11 +29,15 @@ def main():
                         "transcribe", "translate"], help="whether to perform X->X speech recognition ('transcribe') or X->English translation ('translate')")
 
     args = parser.parse_args().__dict__
+    gui : bool = args.pop("gui")
     model_name: str = args.pop("model")
     output_dir: str = args.pop("output_dir")
     output_srt: bool = args.pop("output_srt")
     srt_only: bool = args.pop("srt_only")
     os.makedirs(output_dir, exist_ok=True)
+
+    if gui:
+        Tk_Window()
 
     if model_name.endswith(".en"):
         warnings.warn(
