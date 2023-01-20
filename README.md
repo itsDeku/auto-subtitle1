@@ -38,6 +38,9 @@ Adding `--task translate` will translate the subtitles into English:
 Run the following to view all available options:
 
     auto_subtitle --help
+Run the following to open GUI:
+
+    auto_subtitle -ui True
 
 ## License
 
