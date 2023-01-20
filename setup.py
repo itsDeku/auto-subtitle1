@@ -5,9 +5,9 @@ from setuptools import setup, find_packages
 
 setup(
     version="1.0",
-    name="auto_subtitle1",
+    name="auto_subtitle2",
     packages=find_packages(),
-    py_modules=["auto_subtitle1"],
+    py_modules=["auto_subtitle2"],
     author="Miguel Piedrafita",
     install_requires=[
         'youtube-dl',
