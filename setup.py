@@ -7,7 +7,7 @@ setup(
     version="1.0",
     name="auto_subtitle1",
     packages=find_packages(),
-    py_modules=["auto_subtitle"],
+    py_modules=["auto_subtitle1"],
     author="Miguel Piedrafita",
     install_requires=[
         'youtube-dl',
