@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     version="1.0",
-    name="auto_subtitle",
+    name="auto_subtitle1",
     packages=find_packages(),
     py_modules=["auto_subtitle"],
     author="Miguel Piedrafita",
