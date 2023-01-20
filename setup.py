@@ -4,7 +4,7 @@ import pkg_resources
 from setuptools import setup, find_packages
 
 setup(
-    version="1.0.0",
+    version="1.0",
     name="auto_subtitle",
     packages=find_packages(),
     py_modules=["auto_subtitle"],
