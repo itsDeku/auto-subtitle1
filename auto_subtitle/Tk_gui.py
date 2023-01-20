@@ -14,8 +14,7 @@ from .utils import filename, write_srt
 def submit(input_dir,output_dir,model_name,output_str,sub_only):  
     
     if model_name.endswith(".en"):
-        warnings.warn(
-            f"{model_name} is an English-only model, forcing English detection.")
+        warnings.warn(f"{model_name} is an English-only model, forcing English detection.")
     audios = get_audio(input_dir)
     model = whisper.load_model(model_name)
  
@@ -30,7 +29,6 @@ def submit(input_dir,output_dir,model_name,output_str,sub_only):
 
     for path, srt_path in subtitles.items():
         out_path = os.path.join(output_dir, f"{filename(path)}.mp4")
-        print(path,srt_path)
         print(f"Adding subtitles to {filename(path)}...")
         print(f"Saved subtitled video to {os.path.abspath(out_path)}.")
 
